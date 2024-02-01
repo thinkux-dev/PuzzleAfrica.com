@@ -7,7 +7,7 @@
     "node": "14.x"
   },
   "scripts": {
-    "start": "nodemon website.js",
+    "start": "node website.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bob-Daawid",
