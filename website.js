@@ -8,6 +8,7 @@ const validator = require('validator');
 const fs = require('fs')
 
 dotenv.config();
+const PORT = process.env.PORT;
 
 const website = express();
 
@@ -59,7 +60,7 @@ website.post('/subscribe', (req, res) => {
     service: 'gmail',
     auth: {
       user: process.env.EMAIL_USER,
-      pass: 'sojeflkqctelcfkg',
+      pass: process.env.EMAIL_PASS,
     },
     // Use either port 465 (SSL) or 587 (TLS)
     port: 465,
@@ -123,4 +124,4 @@ website.get('/video', (req, res) => {
   videoStream.pipe(res);
 });
 
-website.listen(3000, () => console.log('Server started...'));
+website.listen(PORT, () => console.log('Server started...'));
