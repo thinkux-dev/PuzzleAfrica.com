@@ -1,10 +1,21 @@
 {
   "version": 2,
-  "name": "node-js",
   "builds": [
-      { "src": "index.js", "use": "@vercel/node" }
+    { "src": "website.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/" }
+    { "handle": "filesystem" },
+    {
+      "src": "/public/(.*)",
+      "dest": "/public/$1"
+    },
+    {
+      "src": "/website.js",
+      "dest": "/website.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/website.js"
+    }
   ]
 }
