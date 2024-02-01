@@ -26,12 +26,15 @@ website.engine('handlebars', hbs.engine);
 website.set('view engine', 'handlebars');
 
 // Static folder
-website.use('/public', express.static(path.join(__dirname, 'public')));
+website.use(express.static(path.join(__dirname, 'public')));
+// Serve the website.js file
+website.use('/website.js', express.static(path.join(__dirname, 'website.js')));
 
 // Body Parser Middleware
 website.use(bodyParser.urlencoded({ extended: false }));
 website.use(bodyParser.json());
 
+// Routes
 website.get('/', (req, res) => {
   res.render('contact');
 });
