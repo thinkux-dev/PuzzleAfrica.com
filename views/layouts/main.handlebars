@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <!-- General Sans font stylesheet -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=General+Sans:wght@400;700&display=swap"
+        />
+
+        <!-- Fontawesome -->
+        <script src="https://kit.fontawesome.com/d04590244b.js" crossorigin="anonymous"></script>
+
+        <!-- Add this line to include the react-toastify styles -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/react-toastify/7.0.4/react-toastify.min.css">
+
+        <!-- Add this line to include the react-toastify script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-toastify/7.0.4/react-toastify.min.js"></script>
+
+
+        <!-- Your custom stylesheets -->
+        <link rel="stylesheet" href="public/css/styles.css" >
+        <link
+            rel="stylesheet" href="public/css/mobile.css"
+        >
+        <link
+        rel="stylesheet" href="public/css/widescreen.css"
+        >
+        <link
+        rel="stylesheet" href="public/css/widescreen2.css"
+        >
+
+        {{!-- Custom script --}}
+        <script src="website.js"></script>
+        {{!-- <link rel="stylesheet" href="website.js"> --}}
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="public/favicon.ico" />
+        <title>Puzzle Africa</title>
+    </head>
+
+    <body>
+        <!-- Add a container for react-toastify toasts -->
+        <div id="toast-container" class="toast-container"></div>
+
+        <p id="msg">{{msg}}</p>
+        {{!-- Navigation --}}
+        <nav id="main-nav">
+            <div class="container">
+            
+                <a href="#"
+                    ><img
+                        src="public/img/PLogo-png.png"
+                        alt="Puzzle Africa"
+                        class="nav_logo"
+                /></a>
+                <input type="checkbox" id="check">
+
+                <ul class="nav_links">
+                    <li class="link">
+                        <a href="#">The Puzzle Business Community</a>
+                    </li>
+                    <li class="link">
+                        <a href="#">The Mart<span>coming soon</span></a>
+                    </li>
+                    <li class="link">
+                        <a href="#"
+                            >Business Payments<span>coming soon</span></a
+                        >
+                    </li>
+                    <li class="link"><a href="public/FAQ.html">FAQS</a></li>
+
+
+                    <!-- <a href="#"
+                    ><img
+                        src="img/Launch your business header.png"
+                        alt="Launch business"
+                        class="launch_business"
+                    /></a> -->
+                </ul>
+
+                <a href="#"
+                    ><img
+                        src="public/img/Launch your business header.png"
+                        alt="Launch business"
+                        class="launch_business"
+                /></a>
+                
+                <label for="check">
+                  <img src="public/img/articles/Icons/Puzzle Menu-bar.png" class="Menu-bar">
+                  <i class="fas fa fa-times cancel"></i>
+                </label>
+            </div>
+        </nav>
+
+        <!-- Content -->
+        <section class="container">
+            <div class="content_container">
+                <h1>
+                    Make Your Business More<br />
+                    <span class="heading_1">Powerful With Puzzle</span>
+                </h1>
+
+                <h3>Business In Africa Can Be, Tough, We Make It Easy</h3>
+                <div class="business_community">
+                    <a href="#">
+                      <img
+                        src="public/img/Launch Your Business hero.png"
+                        alt="Launch business"
+                      />
+                    </a>
+                    
+                    <a href="https://whatsapp.com/channel/0029Va62eDxFHWq3nhQP831X" target="_blank">
+                      <img src="public/img/Join Community.png" alt="Join Community" />
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- YouTube Image -->
+        <div class="youtube_container">
+          <video id="videoPlayer" width="650" controls muted="muted" autoplay>
+            <source src="/video" type="video/mp4" />
+          </video>
+        </div>
+
+        <!-- Business Tools -->
+        <div class="business_tools flex-container">
+            <div class="business_puzzle">
+                <!-- left Side -->
+                <h2>
+                    Join Other <span class="business">Businesses</span><br />
+                    Using <span class="puzzle">Puzzle</span> Tools
+                </h2>
+
+                <!-- right side -->
+                <img src="public/img/articles/Group Features.png" alt="" />
+            </div>
+        </div>
+
+        <!-- Puzzles Helps You -->
+        <section class="container">
+            <div class="section_container">
+                <h1 class="puzzle-tools"><span>Puzzle </span>Helps You</h1>
+                <div class="launch_grow_manage">
+                    <h2 class="launch">Launch</h2>
+                    <h2 class="grow">Grow</h2>
+                    <h2 class="manage">Manage</h2>
+                </div>
+
+                <h1 class="business">
+                    Your <span class="span_business">Business</span>
+                </h1>
+                <!-- Desktop View -->
+                <img
+                    src="public/img/articles/Your business(Web view).png"
+                    alt="Your Business"
+                    class="your_business"
+                />
+                <!-- Mobile Image (hidden by default, shown only in mobile view) -->
+                <div class="your_business_mobile" id="youtubeContainer">
+                  <img src="public/img/articles/Your business(Mobile view).png" alt="Mobile Business Image">
+                </div>
+
+                <div class="track_sales">
+                  <!-- Left side -->
+                  <div class="leftside">
+                      <h1>
+                          Track Sales And <span>Manage </span>Your <br />
+                          Business Professionally From <br />
+                          Mobile Phone
+                      </h1>
+                      <ul class="puzzle_values">
+                          <li class="values">
+                            <i class="material-icons checkIcon">check_circle</i>
+                            Create Invoices And Receipts
+                          </li>
+                          <li class="values">
+                              <i class="material-icons checkIcon">check_circle</i>
+                              Manage And Follow Up Customers
+                          </li>
+                          <li class="values">
+                              <i class="material-icons checkIcon">check_circle</i>
+                              Professional And Customized Business Management
+                          </li>
+                      </ul>
+                      <div class="waitlist">
+                          <li class="join_now"><a href="#">Join Waitlist Now</a></li>
+                          <li class="coming_soon">Coming Soon</li>
+                      </div>
+                  </div>
+
+                  <!-- Right side -->
+                  <img
+                      src="public/img/articles/Track Sales & Manage Business.png"
+                      alt="Track sales"
+                  />
+                </div>
+
+                <!-- Business Education -->
+                <div class="Business_Education">
+                  <!-- Left side -->
+                  <img
+                      src="public/img/articles/Business Education with img.png"
+                      alt="Business Education"
+                  />
+
+                  <!-- Right side -->
+                  <div class="leftside">
+                    <h1>
+                        Real <span>Business Education </span> <br/>
+                        And Community You Need <br />
+                        To <span>Grow</span> Your Business
+                    </h1>
+                    <p>
+                      The World Is Evolving Business Is Changing As ELL, It Can Be <br>
+                      Overwhelming, So We Have Curated All The Information And <br>
+                      Community To Help You Thrive In Business, From Marketing, <br>
+                      To Sales, To Social Media Marketing, We Have The Best <br>
+                      Resources For You
+                    </p>
+                    <div class="Start_Learning">
+                        <li class="join_now"><a href="#">Start Learning And Building With Other Business Owners</a></li>
+                    </div>
+                  </div>  
+                </div>
+                <!-- Mobile side -->
+                <div class="Business_Education_mobile">
+                  <!-- Left side -->
+                  <div class="leftside">
+                    <h1>
+                        Real <span>Business Education </span> <br/>
+                        And Community You Need <br />
+                        To <span>Grow</span> Your Business
+                    </h1>
+                    <p>
+                      The World Is Evolving Business Is Changing As ELL, It Can Be <br>
+                      Overwhelming, So We Have Curated All The Information And <br>
+                      Community To Help You Thrive In Business, From Marketing, <br>
+                      To Sales, To Social Media Marketing, We Have The Best <br>
+                      Resources For You
+                    </p>
+                    <div class="Start_Learning">
+                        <li class="join_now"><a href="#">Start Learning And Building With Other Business Owners</a></li>
+                    </div>
+                  </div>
+
+                  <!-- Right side -->
+                  <img
+                      src="public/img/articles/Business Education with img.png"
+                      alt="Business Education"
+                  />  
+                </div>
+
+                <!-- Register Your Business -->
+                <div class="Business_Registration">
+                  <!-- Left side -->
+                  <div class="leftside">
+                      <h1>
+                          <span>Launch</span> And Register Your <br />
+                          Business Anywhere In The <br />
+                          World
+                      </h1>
+                      <ul class="Registrations">
+                          <li class="types">
+                            <i class="material-icons checkIcon">check_circle</i>
+                            UK And USA Business Register
+                          </li>
+                          <li class="types">
+                              <i class="material-icons checkIcon">check_circle</i>
+                              Google Business Registration
+                          </li>
+                          <li class="types">
+                              <i class="material-icons checkIcon">check_circle</i>
+                              Local C.A.C Business Registration
+                          </li>
+                      </ul>
+                      <div class="Start_Learning">
+                          <li class="join_now"><a href="#">Register And Launch Your Business Now</a></li>
+                      </div>
+                  </div>
+                  <!-- Right side -->
+                  <img
+                      src="public/img/articles/CAC&GOOGLE Registration.png"
+                      alt="Register Business"
+                  />
+                </div>
+
+                <!-- Power Your Business With Puzzle -->
+                <img src="public/img/articles/Make Your Business More Powerful with Puzzle.png" alt="Powerful with Puzzle" class="Power_With_Puzzle">
+            </div>
+        </section>
+
+        <!-- Service Partners -->
+        <div class="service_partners">
+          <h1>Our <span>Partners</span></h1>
+          <div class="companies">
+            <img src="public/img/articles/companies/Google svg.png" alt="Google">
+            <img src="public/img/articles/companies/cac logo.png" alt="CAC">
+            <img src="public/img/articles/companies/discover books by simsak.png" alt="simsak">
+          </div>
+        </div>
+
+        <!-- Start Business -->
+        <div class="Start_Business">
+          <div class="Get_Started">
+            <h1>
+              Get Started By Launching <br>
+              <span>Your Business</span>
+            </h1>
+            <center class="button"><a href="#"><img src="public/img/Launch your business black.png" alt="Launch Business"></a>
+            </center>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="main-footer">
+          <div class="container footer-container contact">
+            <div class="grid_container">
+              <div class="whitelogo">
+                <img src="public/img/WhitePLogo.png" alt="">
+              </div>
+  
+              <div class="moblie_flex_container">
+                <div>
+                  <ul>
+                    <li class="list_header">Company</li>
+                    <li class="list_children FAQ"><a href="public/FAQ.html">FAQS</a></li>
+                    <li class="list_children">Businesses</li>
+                    <li class="list_children privacy"><a href="public/privacy-policy.html">Privacy Policy</a></li>
+                  </ul>
+                </div>
+    
+                <div class="quick_link_header">
+                  <ul>
+                    <li class="list_header quick_link">Quick Link</li>
+                    <li class="list_children about"><a href="public/about.html">About Us</a></li>
+                    <li class="list_children IG"><a href="https://www.instagram.com/puzzleafrica/">Instagram</a></li>
+                  </ul>
+                </div>
+
+                <form method="post" action="subscribe" id="subscribeForm">
+                  <div class="subscribe-input">
+                    <ul>
+                      <li class="list_header Sub">Subscribe</li>
+                      <input name="senderEmail" type="email" placeholder="Your Email">
+                      <button type="submit">&rarr;</button>
+                    </ul>
+                  </div>
+                </form>
+              </div>
+              
+            </div> 
+          </div>
+
+          <section class="horizontal-line"></section>
+
+          <div class="bottom-footer-elements">
+            <div class="Copyright">Copyright ©2022 FlowUI.co</div>
+
+            <div class="social-media">
+              <a href="https://web.facebook.com/profile.php?id=61552299771461">
+                <img src="public/img/articles/Icons/PuzzleFacebook.png" alt="">
+              </a>
+              <a href="#">
+                <img src="public/img/articles/Icons/PuzzleTwitter2.png" alt="">
+              </a>
+              <a href="https://www.instagram.com/puzzleafrica/">
+                <img src="public/img/articles/Icons/PuzzleIG.png" alt="">
+              </a>
+            </div>
+          </div>
+        </footer>
+
+        <script>
+          // Add this script to automatically hide the message after 10 seconds
+          document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+              var msgElement = document.getElementById("msg");
+              if (msgElement) {
+                msgElement.style.display = "none";
+              }
+            }, 5000); // 5 seconds in milliseconds
+
+            function playVideo() {
+                const youtubeContainer = document.getElementById('youtubeContainer');
+                youtubeContainer.innerHTML = `
+                    <video controls autoplay class="youtube_video">
+                        <source src="/play-video" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                `;
+            }
+
+            // Initialize react-toastify
+            const { toast } = window.ReactToastify;
+
+            // Use react-toastify to handle notifications
+            document.getElementById("subscribeForm").addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                // Use fetch to submit the form data to the server
+                fetch('/subscribe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        senderEmail: document.getElementsByName("senderEmail")[0].value,
+                        // Other data if needed
+                    }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Show success toast
+                        toast.success(data.message, { position: "bottom-right" });
+                    } else {
+                        // Show error toast
+                        toast.error(data.message, { position: "bottom-right" });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error submitting form:', error);
+                    // Show error toast
+                    toast.error('An error occurred. Please try again later.', { position: "bottom-right" });
+                });
+            });
+          });
+      </script>
+    </body>
+</html>
