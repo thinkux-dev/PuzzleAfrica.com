@@ -18,12 +18,6 @@
         <!-- Fontawesome -->
         <script src="https://kit.fontawesome.com/d04590244b.js" crossorigin="anonymous"></script>
 
-        <!-- Add this line to include the react-toastify styles -->
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/react-toastify/7.0.4/react-toastify.min.css">
-
-        <!-- Add this line to include the react-toastify script -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-toastify/7.0.4/react-toastify.min.js"></script>
-
 
         <!-- Your custom stylesheets -->
         <link rel="stylesheet" href="public/css/styles.css" >
@@ -398,41 +392,6 @@
                     </video>
                 `;
             }
-
-            // Initialize react-toastify
-            const { toast } = window.ReactToastify;
-
-            // Use react-toastify to handle notifications
-            document.getElementById("subscribeForm").addEventListener("submit", function (event) {
-                event.preventDefault();
-
-                // Use fetch to submit the form data to the server
-                fetch('/subscribe', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        senderEmail: document.getElementsByName("senderEmail")[0].value,
-                        // Other data if needed
-                    }),
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        // Show success toast
-                        toast.success(data.message, { position: "bottom-right" });
-                    } else {
-                        // Show error toast
-                        toast.error(data.message, { position: "bottom-right" });
-                    }
-                })
-                .catch(error => {
-                    console.error('Error submitting form:', error);
-                    // Show error toast
-                    toast.error('An error occurred. Please try again later.', { position: "bottom-right" });
-                });
-            });
           });
       </script>
     </body>
