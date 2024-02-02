@@ -10,10 +10,6 @@
       "dest": "/public/$1"
     },
     {
-      "src": "/website.js",
-      "dest": "/website.js"
-    },
-    {
       "src": "/(.*)",
       "dest": "/website.js",
       "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
