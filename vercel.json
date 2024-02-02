@@ -1,6 +1,9 @@
 {
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" },
-    { "source": "/(.*)", "destination": "/" }
+  "version": 2,
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/server.js" },
+    { "src": "/(.*)", "dest": "/server.js" },
+    { "src": "/views/layouts/main.handlebars", "dest": "/server.js" },
+    { "src": "/public/(.*)", "dest": "/public/$1" }
   ]
 }
