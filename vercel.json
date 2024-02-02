@@ -1,7 +1,5 @@
 {
-  "version": 2,
-  "routes": [
-    { "src": "/(.*)", "dest": "/server.js" },
-    { "src": "/views/layouts/main.handlebars", "dest": "/server.js" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
