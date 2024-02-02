@@ -49,6 +49,18 @@ app.get('/', (req, res) => {
   res.render('contact');
 });
 
+// Define a route handler
+app.get('/set-cookie', (req, res) => {
+  // Set a cookie with the SameSite and Secure attributes
+  res.cookie('myCookie', 'cookieValue', { 
+    sameSite: 'None', 
+    secure: true 
+  });
+
+  // Send a response
+  res.send('Cookie set with SameSite and Secure attributes');
+});
+
 app.post('/subscribe', (req, res) => {
   const { senderEmail, message } = req.body;
 
