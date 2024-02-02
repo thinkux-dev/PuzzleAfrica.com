@@ -1,18 +1,9 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "/website.js", "use": "@vercel/node" }
-  ],
+  "functions": { "api": { "runtime": "@vercel/node" } },
   "routes": [
-    { "handle": "filesystem" },
-    {
-      "src": "/public/(.*)",
-      "dest": "/public/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/website.js",
-      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
-    }
+    { "src": "/api/(.*)", "dest": "api/$1" },
+    { "src": "/public/(.*)", "dest": "/public/$1" },
+    { "src": "/(.*)", "dest": "/server.js" }
   ]
 }
