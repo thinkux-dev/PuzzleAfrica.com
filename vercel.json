@@ -1,7 +1,7 @@
 {
   "version": 2,
   "builds": [
-    { "src": "website.js", "use": "@vercel/node" }
+    { "src": "/website.js", "use": "@vercel/node" }
   ],
   "routes": [
     { "handle": "filesystem" },
@@ -15,7 +15,8 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/website.js"
+      "dest": "/website.js",
+      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
     }
   ]
 }

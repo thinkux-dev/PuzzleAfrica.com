@@ -7,10 +7,20 @@ const dotenv = require('dotenv');
 const validator = require('validator');
 const fs = require('fs')
 
+const cors = require('cors')
+
 dotenv.config();
 const PORT = process.env.PORT;
 
 const website = express();
+
+const corsConfig = {
+  origin: "*",
+  Credential: true,
+  methods: ["GET", "POST", "PUT", "DELETE"]
+};
+website.options("", cors(corsConfig))
+website.use(cors(corsConfig))
 
 // View engine setup
 const hbs = exphbs.create({
@@ -96,35 +106,35 @@ website.post('/subscribe', (req, res) => {
 });
 
 // Handle click event on YouTube image
-website.get('/video', (req, res) => {
-  const range = req.headers.range;
+// website.get('/video', (req, res) => {
+//   const range = req.headers.range;
 
-  if(!range) {
-    res.status(400).send("Requires Range header");
-  }
+//   if(!range) {
+//     res.status(400).send("Requires Range header");
+//   }
 
-  const videoPath = 'public/successfulcompany.mp4';
-  const videoSize = fs.statSync('public/successfulcompany.mp4').size;
+//   const videoPath = 'public/successfulcompany.mp4';
+//   const videoSize = fs.statSync('public/successfulcompany.mp4').size;
 
-  // Parse Range
-  // Example: 'bytes=32324-'
-  const CHUNCK_SIZE = 100 ** 6; // 10MB
-  const start = Number(range.replace(/\D/g, ""));;
-  const end = Math.min(start + CHUNCK_SIZE, videoSize - 1);
+//   // Parse Range
+//   // Example: 'bytes=32324-'
+//   const CHUNCK_SIZE = 100 ** 6; // 10MB
+//   const start = Number(range.replace(/\D/g, ""));;
+//   const end = Math.min(start + CHUNCK_SIZE, videoSize - 1);
 
-  const contentLength = end - start + 1;
-  const headers = {
-    "Content-Range": `bytes ${start}-${end}/${videoSize}`,
-    "Accept-Ranges": "bytes",
-    "Content-Length": contentLength,
-    "Content-Type": "video/mp4",
-  };
+//   const contentLength = end - start + 1;
+//   const headers = {
+//     "Content-Range": `bytes ${start}-${end}/${videoSize}`,
+//     "Accept-Ranges": "bytes",
+//     "Content-Length": contentLength,
+//     "Content-Type": "video/mp4",
+//   };
 
-  res.writeHead(206, headers);
+//   res.writeHead(206, headers);
 
-  const videoStream = fs.createReadStream(videoPath, { start, end });
+//   const videoStream = fs.createReadStream(videoPath, { start, end });
 
-  videoStream.pipe(res);
-});
+//   videoStream.pipe(res);
+// });
 
 website.listen(PORT, () => console.log('Server started...'));
