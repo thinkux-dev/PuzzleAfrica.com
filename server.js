@@ -7,20 +7,20 @@ const dotenv = require('dotenv');
 const validator = require('validator');
 const fs = require('fs')
 
-const cors = require('cors')
+// const cors = require('cors')
 
 dotenv.config();
 const PORT = process.env.PORT;
 
 const app = express();
 
-const corsConfig = {
-  origin: "*",
-  Credential: true,
-  methods: ["GET", "POST", "PUT", "DELETE"]
-};
-app.options("", cors(corsConfig))
-app.use(cors(corsConfig))
+// const corsConfig = {
+//   origin: "*",
+//   Credential: true,
+//   methods: ["GET", "POST", "PUT", "DELETE"]
+// };
+// app.options("", cors(corsConfig))
+// app.use(cors(corsConfig))
 
 // View engine setup
 const hbs = exphbs.create({
