@@ -36,9 +36,10 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 // Static folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '..', 'client', 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
 // Serve the app.js file
-app.use('/app.js', express.static(path.join(__dirname, 'app.js')));
+// app.use('/app.js', express.static(path.join(__dirname, 'app.js')));
 
 // Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
